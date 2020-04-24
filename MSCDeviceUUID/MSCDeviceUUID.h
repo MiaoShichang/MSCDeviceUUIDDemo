@@ -11,7 +11,7 @@
 /**
  *@brief 该工具类创建的是一个伪设备UUID，只是把一个UUID保存到keychain，关于keychain的相关资料请自己查阅。
  *@note 1.如果想删除保存在keychain中的值，请调用.m文件中的 deleteUUID 方法
- *      2.使用时如果没有生成成功，请添加的库：Security.framework
+ *      2.使用时如果没有生成成功，请添加系统库：Security.framework
  */
 
 @interface MSCDeviceUUID : NSObject
@@ -20,5 +20,10 @@
  *@brief 获取设备的UUID
  */
 + (NSString *)deviceUUID;
+
+/**
+*@brief 删除设备的UUID
+*/
++ (BOOL)deleteUUID;
 
 @end

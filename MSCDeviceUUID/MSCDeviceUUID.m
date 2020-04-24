@@ -13,8 +13,7 @@ static NSString *const identifierForDeviceUUID = @"identifierForDeviceUUID201510
 
 @implementation MSCDeviceUUID
 
-+ (NSString *)makeUUID
-{
++ (NSString *)makeUUID {
     //also known as uuid/universallyUniqueIdentifier
     CFUUIDRef uuidRef = CFUUIDCreate(NULL);
     CFStringRef uuidStringRef = CFUUIDCreateString(NULL, uuidRef);
@@ -28,8 +27,7 @@ static NSString *const identifierForDeviceUUID = @"identifierForDeviceUUID201510
 }
 
 #pragma mark -- keychain
-+ (NSMutableDictionary *)query
-{
++ (NSMutableDictionary *)query {
     NSMutableDictionary *query = [[NSMutableDictionary alloc] init];
     [query setObject:(id)kSecClassGenericPassword forKey:(id)kSecClass];
     [query setObject:identifierForDeviceUUID forKey:(id)kSecAttrGeneric];
@@ -43,8 +41,7 @@ static NSString *const identifierForDeviceUUID = @"identifierForDeviceUUID201510
     return query;
 }
 
-+ (NSMutableDictionary *)value:(NSString *)uuid
-{
++ (NSMutableDictionary *)value:(NSString *)uuid {
     NSAssert((uuid != nil && uuid.length>0), @"the uuid is not legal in function value");
     if(uuid == nil){uuid = @"";}
     NSMutableDictionary *value = [NSMutableDictionary dictionary];
@@ -59,8 +56,7 @@ static NSString *const identifierForDeviceUUID = @"identifierForDeviceUUID201510
 }
 
 //
-+ (NSString *)deviceUUID
-{
++ (NSString *)deviceUUID {
     NSString *deviceUUID = nil;
     NSMutableDictionary *qurey = [self query];
     NSDictionary *tempQuery = [NSDictionary dictionaryWithDictionary:qurey];
@@ -85,10 +81,9 @@ static NSString *const identifierForDeviceUUID = @"identifierForDeviceUUID201510
 }
 
 /**
- *@brief 此函数的作用是删除保存在keychain中的UUID。一般使用时不会要求删除相应的设备UUID，所有此接口没有放开，如有需要，可以自己在头文件中放开
+ *@brief 此函数的作用是删除保存在keychain中的UUID
  */
-+ (BOOL)deleteUUID
-{
++ (BOOL)deleteUUID {
     NSMutableDictionary *query = [self query];
     [query removeObjectForKey:(id)kSecMatchLimit];
     [query removeObjectForKey:(id)kSecReturnAttributes];

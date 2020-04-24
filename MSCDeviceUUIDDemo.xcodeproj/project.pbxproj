@@ -220,6 +220,7 @@
 				TargetAttributes = {
 					07DD14CC1BE1B6F7006158E6 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = WF6A3C787Y;
 					};
 					07DD14E51BE1B6F7006158E6 = {
 						CreatedOnToolsVersion = 7.1;
@@ -236,6 +237,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -425,9 +427,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WF6A3C787Y;
 				INFOPLIST_FILE = MSCDeviceUUIDDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.miaoshichang.MSCDeviceUUIDDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -437,9 +441,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WF6A3C787Y;
 				INFOPLIST_FILE = MSCDeviceUUIDDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.miaoshichang.MSCDeviceUUIDDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -512,6 +518,7 @@
 				07DD14FC1BE1B6F7006158E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07DD14FD1BE1B6F7006158E6 /* Build configuration list for PBXNativeTarget "MSCDeviceUUIDDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +527,7 @@
 				07DD14FF1BE1B6F7006158E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07DD15001BE1B6F7006158E6 /* Build configuration list for PBXNativeTarget "MSCDeviceUUIDDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +536,7 @@
 				07DD15021BE1B6F7006158E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
